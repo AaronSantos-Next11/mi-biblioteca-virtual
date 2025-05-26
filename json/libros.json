@@ -1,0 +1,122 @@
+[
+  {
+    "nombre": "Breves respuestas a las grandes preguntas",
+    "autor": "Stephen Hawking",
+    "categoría": "ciencia",
+    "idioma_original": "inglés",
+    "año_publicación": 2018,
+    "imagen_portada": "../assets/images/portadas/breves-respuestas-a-las-grandes-preguntas.png"
+  },
+  {
+    "nombre": "El gen: Una historia íntima",
+    "autor": "Siddhartha Mukherjee",
+    "categoría": "ciencia",
+    "idioma_original": "inglés",
+    "año_publicación": 2016,
+    "imagen_portada": "https://www.planetadelibros.com/libro-el-gen-una-historia-intima/218212"
+  },
+  {
+    "nombre": "Una breve historia del tiempo",
+    "autor": "Stephen Hawking",
+    "categoría": "ciencia",
+    "idioma_original": "inglés",
+    "año_publicación": 1988,
+    "imagen_portada": "https://www.planetadelibros.com/libro-una-breve-historia-del-tiempo/12345"
+  },
+  {
+    "nombre": "El origen de las especies",
+    "autor": "Charles Darwin",
+    "categoría": "ciencia",
+    "idioma_original": "inglés",
+    "año_publicación": 1859,
+    "imagen_portada": "https://www.planetadelibros.com.mx/libro-el-origen-de-las-especies/243950"
+  },
+  {
+    "nombre": "Cosmos",
+    "autor": "Carl Sagan",
+    "categoría": "ciencia",
+    "idioma_original": "inglés",
+    "año_publicación": 1980,
+    "imagen_portada": "https://www.planetadelibros.com.mx/libro-cosmos/407270"
+  },
+  {
+    "nombre": "Clean Code",
+    "autor": "Robert C. Martin",
+    "categoría": "tecnología",
+    "idioma_original": "inglés",
+    "año_publicación": 2008,
+    "imagen_portada": "https://www.amazon.com.mx/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
+  },
+  {
+    "nombre": "You Don't Know JS",
+    "autor": "Kyle Simpson",
+    "categoría": "tecnología",
+    "idioma_original": "inglés",
+    "año_publicación": 2015,
+    "imagen_portada": "https://www.amazon.com.mx/You-Dont-Know-JS-Book/dp/1491904240"
+  },
+  {
+    "nombre": "Introduction to the Theory of Computation",
+    "autor": "Michael Sipser",
+    "categoría": "tecnología",
+    "idioma_original": "inglés",
+    "año_publicación": 1997,
+    "imagen_portada": "https://www.amazon.com.mx/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X"
+  },
+  {
+    "nombre": "Structure and Interpretation of Computer Programs",
+    "autor": "Harold Abelson y Gerald Jay Sussman",
+    "categoría": "tecnología",
+    "idioma_original": "inglés",
+    "año_publicación": 1985,
+    "imagen_portada": "https://upload.wikimedia.org/wikipedia/en/8/81/SICP_cover.jpg"
+  },
+  {
+    "nombre": "The Pragmatic Programmer",
+    "autor": "Andrew Hunt y David Thomas",
+    "categoría": "tecnología",
+    "idioma_original": "inglés",
+    "año_publicación": 1999,
+    "imagen_portada": "https://www.amazon.com.mx/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
+  },
+  {
+    "nombre": "Sapiens: De animales a dioses",
+    "autor": "Yuval Noah Harari",
+    "categoría": "historia",
+    "idioma_original": "hebreo",
+    "año_publicación": 2011,
+    "imagen_portada": "https://www.planetadelibros.com/libro-sapiens-de-animales-a-dioses/219398"
+  },
+  {
+    "nombre": "Guns, Germs, and Steel",
+    "autor": "Jared Diamond",
+    "categoría": "historia",
+    "idioma_original": "inglés",
+    "año_publicación": 1997,
+    "imagen_portada": "https://www.amazon.com.mx/Guns-Germs-Steel-Fates-Societies/dp/0393038912"
+  },
+  {
+    "nombre": "Postguerra: Una historia de Europa desde 1945",
+    "autor": "Tony Judt",
+    "categoría": "historia",
+    "idioma_original": "inglés",
+    "año_publicación": 2005,
+    "imagen_portada": "https://www.planetadelibros.com/libro-postguerra-una-historia-de-europa-desde-1945/123456"
+  },
+  {
+    "nombre": "La historia del siglo XX",
+    "autor": "Martin Gilbert",
+    "categoría": "historia",
+    "idioma_original": "inglés",
+    "año_publicación": 1997,
+    "imagen_portada": "https://www.planetadelibros.com/libro-la-historia-del-siglo-xx/123457"
+  },
+  {
+    "nombre": "La Segunda Guerra Mundial",
+    "autor": "Antony Beevor",
+    "categoría": "historia",
+    "idioma_original": "inglés",
+    "año_publicación": 2012,
+    "imagen_portada": "https://www.planetadelibros.com/libro-la-segunda-guerra-mundial/123458"
+  }
+]
