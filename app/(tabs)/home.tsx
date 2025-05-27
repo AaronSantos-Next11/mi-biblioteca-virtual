@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import BookDetailModal from '../../components/BookDetailModal'
 
 // Datos de libros integrados directamente
 const librosData = [
@@ -151,6 +152,22 @@ interface Libro {
 }
 
 export default function Home() {
+  // Estado para el modal
+  const [selectedBook, setSelectedBook] = useState<Libro | null>(null);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  // Función para abrir el modal con un libro específico
+  const openBookDetail = (libro: Libro) => {
+    setSelectedBook(libro);
+    setModalVisible(true);
+  };
+
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setModalVisible(false);
+    setSelectedBook(null);
+  };
+
   // Obtener libro destacado (primer libro)
   const libroDestacado = librosData[0];
   
@@ -218,7 +235,11 @@ export default function Home() {
     }
 
     return (
-      <TouchableOpacity key={libro.id} style={styles.bookCard}>
+      <TouchableOpacity 
+        key={libro.id} 
+        style={styles.bookCard}
+        onPress={() => openBookDetail(libro)}
+      >
         <View style={styles.bookImageContainer}>
           {imagenSource ? (
             <Image 
@@ -246,7 +267,10 @@ export default function Home() {
         {/* Libro destacado del día */}
         <View style={styles.featuredSection}>
           <Text style={styles.sectionTitle}>Nuestro libro del día</Text>
-          <View style={styles.featuredBook}>
+          <TouchableOpacity 
+            style={styles.featuredBook}
+            onPress={() => openBookDetail(libroDestacado)}
+          >
             <View style={styles.featuredImageContainer}>
               <Image 
                 source={require('../../assets/images/portadas/breves-respuestas-a-las-grandes-preguntas.png')}
@@ -262,7 +286,7 @@ export default function Home() {
                 presentada de manera accesible por uno de los físicos más brillantes de nuestro tiempo.
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* Sección Tecnología */}
@@ -307,6 +331,13 @@ export default function Home() {
           </ScrollView>
         </View>
       </ScrollView>
+
+      {/* Modal de detalles del libro */}
+      <BookDetailModal 
+        libro={selectedBook}
+        visible={modalVisible}
+        onClose={closeModal}
+      />
     </View>
   );
 }
@@ -351,7 +382,7 @@ const styles = StyleSheet.create({
   },
   featuredImageContainer: {
     width: 80,
-    height: 100,
+    height: 150,
     backgroundColor: '#dda853',
     borderRadius: 6,
     justifyContent: 'center',
@@ -434,3 +465,5 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
 });
+
+// No se necesita código adicional - el archivo está completo

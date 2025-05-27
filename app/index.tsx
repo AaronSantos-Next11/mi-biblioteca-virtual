@@ -34,10 +34,10 @@ export default function Index() {
             <Text style={styles.slogan1}>La mejor alternativa a Amazon Kindle</Text>
           </View>
 
-          <View style={{
-            marginTop: '55%'
-          }}>
+          {/* Espaciador flexible */}
+          <View style={styles.spacer} />
 
+          <View style={styles.bottomSection}>
             <Text style={styles.slogan2}>
               Descubre miles de libros gratuitos y premium al alcance de tu mano.
             </Text>
@@ -81,6 +81,14 @@ const styles = StyleSheet.create({
   content: {
     marginTop: '20%',
     width: '100%',
+  },
+  spacer: {
+    flex: 1, // Toma el espacio disponible
+    minHeight: 60, // Altura mínima para evitar que se comprima demasiado
+  },
+  bottomSection: {
+    width: '100%',
+    paddingBottom: 40, // Espacio desde el borde inferior
   },
   titulo: {
     fontSize: 59,
