@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import BookDetailModal from '../../components/BookDetailModal'
+import { Ionicons } from '@expo/vector-icons';
 
 // Datos de libros integrados directamente
 const librosData = [
@@ -261,6 +262,9 @@ export default function Home() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
         {/* Header */}
         <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton}>
+            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}}  />
+          </TouchableOpacity>
           <Text style={styles.headerTitle}>Home</Text>
         </View>
 
@@ -350,15 +354,24 @@ const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
   },
+  backButton: {
+    marginRight: 15,
+  },
   header: {
-    backgroundColor: '#201658',
-    paddingVertical: 20,
-    paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingTop: 50,
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    backgroundColor: '#201658',
+    borderBottomWidth: 1,
+    borderBottomColor: '#dda853',
   },
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
+    flex: 1,
     color: '#f9e8c9',
   },
   featuredSection: {

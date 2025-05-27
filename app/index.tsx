@@ -50,7 +50,7 @@ export default function Index() {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => router.push('/crearCuenta')}
+              onPress={() => router.push('/home')}
               style={styles.button3}
             >
               <Text style={styles.text2}>Comienza a leer</Text>
