@@ -20,16 +20,16 @@ export default function TabLayout() {
          options={{
             title: 'Reseña',
             headerShown: false, // También para las otras pantallas si no quieres header
-            tabBarIcon: ({color}) => <FontAwesome size={28} name='cog' color={color}/>
+            tabBarIcon: ({color}) => <FontAwesome size={28} name='heart' color={color}/>
          }}
          />
 
          <Tabs.Screen 
          name='user'
          options={{
-            title: 'User',
+            title: 'Perfil',
             headerShown: false, // También para las otras pantallas si no quieres header
-            tabBarIcon: ({color}) => <FontAwesome size={28} name='info-circle' color={color}/>
+            tabBarIcon: ({color}) => <FontAwesome size={28} name='user' color={color}/>
          }}
          />
 

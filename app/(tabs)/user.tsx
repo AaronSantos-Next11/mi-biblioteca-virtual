@@ -104,7 +104,7 @@ export default function User() {
           <TouchableOpacity style={styles.backButton}>
             <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}} onPress={() => router.push('/home')} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>User</Text>
+          <Text style={styles.headerTitle}>Perfil</Text>
           <TouchableOpacity onPress={handleEdit} style={styles.editButton}>
             <Ionicons 
               name={isEditing ? "checkmark" : "pencil"} 
