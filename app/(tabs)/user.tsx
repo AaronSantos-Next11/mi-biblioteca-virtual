@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   StyleSheet,
   Text,
@@ -10,6 +10,7 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useLocalSearchParams } from 'expo-router';
 
 interface UserData {
   fullName: string;
@@ -19,6 +20,8 @@ interface UserData {
 }
 
 export default function User() {
+  const params = useLocalSearchParams();
+  
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState<UserData>({
     fullName: 'Juan Pérez García',
@@ -28,6 +31,20 @@ export default function User() {
   });
 
   const [editedData, setEditedData] = useState<UserData>(userData);
+
+  // Actualizar los datos del usuario cuando se reciben parámetros
+  useEffect(() => {
+    if (params.fullName || params.username || params.email || params.phone) {
+      const newUserData: UserData = {
+        fullName: (params.fullName as string) || userData.fullName,
+        username: (params.username as string) || userData.username,
+        email: (params.email as string) || userData.email,
+        phone: (params.phone as string) || userData.phone,
+      };
+      setUserData(newUserData);
+      setEditedData(newUserData);
+    }
+  }, [params]);
 
   const handleEdit = () => {
     if (isEditing) {

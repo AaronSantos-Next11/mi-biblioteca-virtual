@@ -8,17 +8,31 @@ export default function crearCuenta() {
 
   const router = useRouter();
   const [user, setUser] = useState(''); // El estado del input "user" será un string
-  const [pw, setPw] = useState('') // El estado del input "password" será un string
+  const [pw, setPw] = useState(''); // El estado del input "password" será un string
+  const [nombres, setNombres] = useState(''); // Nuevo estado para nombres
+  const [apellidos, setApellidos] = useState(''); // Nuevo estado para apellidos
+  const [email, setEmail] = useState(''); // Nuevo estado para email
+  const [telefono, setTelefono] = useState(''); // Nuevo estado para teléfono
 
   const login = () => {
-    if (user == "" || pw == "" ) {
-      alert("Por favor de llenar los campos vacios")
+    if (user == "" || pw == "" || nombres == "" || apellidos == "" || email == "" || telefono == "") {
+      alert("Por favor de llenar todos los campos");
     } else {
       if (user.toLocaleLowerCase() == "admin" && pw == "123") {
         alert("Bienvenido super admin");
-        router.push('/(tabs)/home');
+        
+        // Navegar a user pasando los datos como parámetros
+        router.push({
+          pathname: '/(tabs)/user',
+          params: {
+            fullName: `${nombres} ${apellidos}`,
+            username: user,
+            email: email,
+            phone: telefono,
+          }
+        });
       } else {
-        alert("User y password incorrectos")
+        alert("User y password incorrectos");
       }
     }
   }
@@ -36,6 +50,8 @@ export default function crearCuenta() {
           <Text style={styles.label}> Nombre (s): </Text>
           <TextInput
             style={styles.input}
+            value={nombres}
+            onChangeText={setNombres}
             placeholder="Ingrese su nombre (s) "
             placeholderTextColor="#999"
           />
@@ -45,6 +61,8 @@ export default function crearCuenta() {
           <Text style={styles.label}> Apellidos: </Text>
           <TextInput
             style={styles.input}
+            value={apellidos}
+            onChangeText={setApellidos}
             placeholder="Ingrese sus apellido"
             placeholderTextColor="#999"
             secureTextEntry={false}
@@ -55,6 +73,7 @@ export default function crearCuenta() {
           <Text style={styles.label}> Nombre de usuario: </Text>
           <TextInput
             style={styles.input}
+            value={user}
             onChangeText={setUser}
             placeholder="Ingrese su nombre de usuario"
             placeholderTextColor="#999"
@@ -66,6 +85,8 @@ export default function crearCuenta() {
           <Text style={styles.label}> Email: </Text>
           <TextInput
             style={styles.input}
+            value={email}
+            onChangeText={setEmail}
             placeholder="Ingrese su correo electrónico"
             placeholderTextColor="#999"
             secureTextEntry={false}
@@ -76,9 +97,11 @@ export default function crearCuenta() {
           <Text style={styles.label}> Número de teléfono: </Text>
           <TextInput
             style={styles.input}
+            value={telefono}
+            onChangeText={setTelefono}
             placeholder="Ingrese su número de teléfono"
             placeholderTextColor="#999"
-            secureTextEntry={true}
+            secureTextEntry={false}
           />
         </View>
 
@@ -86,6 +109,7 @@ export default function crearCuenta() {
           <Text style={styles.label}> Contraseña: </Text>
           <TextInput
             style={styles.input}
+            value={pw}
             onChangeText={setPw}
             placeholder="Ingrese su contraseña"
             placeholderTextColor="#999"
