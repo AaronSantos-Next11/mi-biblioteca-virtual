@@ -10,7 +10,12 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+import { useRouter } from "expo-router";
+
 export default function Reseña() {
+
+  const router = useRouter();
+
   const [bookTitle, setBookTitle] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Selected option');
   const [reviewText, setReviewText] = useState('');
@@ -33,7 +38,7 @@ export default function Reseña() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}}/>
+            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}} onPress={() => router.push('/home')}/>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Reseña</Text>
         </View>

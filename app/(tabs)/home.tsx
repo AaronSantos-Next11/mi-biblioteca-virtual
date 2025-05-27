@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'rea
 import React, { useState } from 'react'
 import BookDetailModal from '../../components/BookDetailModal'
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from "expo-router";
 
 // Datos de libros integrados directamente
 const librosData = [
@@ -153,6 +154,10 @@ interface Libro {
 }
 
 export default function Home() {
+
+  // Instancia de la rutas
+  const router = useRouter();
+
   // Estado para el modal
   const [selectedBook, setSelectedBook] = useState<Libro | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
@@ -263,7 +268,7 @@ export default function Home() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}}  />
+            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}} onPress={() => router.push('/')}  />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Home</Text>
         </View>

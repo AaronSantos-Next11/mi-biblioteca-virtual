@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from 'expo-router';
+import { useRouter } from "expo-router";
 
 interface UserData {
   fullName: string;
@@ -20,7 +21,9 @@ interface UserData {
 }
 
 export default function User() {
+
   const params = useLocalSearchParams();
+  const router = useRouter();
   
   const [isEditing, setIsEditing] = useState(false);
   const [userData, setUserData] = useState<UserData>({
@@ -99,7 +102,7 @@ export default function User() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.backButton}>
-            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}}  />
+            <Ionicons name="arrow-back" size={24} style={{color:'#f9e8c9'}} onPress={() => router.push('/home')} />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>User</Text>
           <TouchableOpacity onPress={handleEdit} style={styles.editButton}>
