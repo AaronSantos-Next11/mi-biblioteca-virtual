@@ -2,6 +2,64 @@
 
 **Dumblee** es una aplicación móvil desarrollada con **React Native**, **Expo** y **TypeScript**, que funciona como una biblioteca virtual centrada en libros de **programación**, **ciencia** e **historia**. Diseñada para entusiastas del conocimiento, ofrece una experiencia intuitiva y visualmente atractiva para explorar, consultar y descubrir libros de diversas categorías.
 
+## Diagrama de navegación y diseño de Dumblee
+
+El siguiente diagrama muestra el flujo principal de pantallas en la aplicación móvil **Dumblee**, así como notas importantes sobre el diseño y los datos manejados.
+
+### Flujo de pantallas:
+
+1. **Pantalla de presentación**
+   - Bienvenida al usuario.
+   - Ofrece opciones para iniciar sesión o crear una cuenta.
+   - Fondo decorativo con ilustraciones.
+   - Una vez autenticado, el usuario accede directamente al **Home**.
+
+2. **Pantalla Home / Inicio**
+   - Muestra el **libro destacado del día**.
+   - Muestra un feed por **categorías** (tecnología, ciencia, historia).
+   - Accesible desde la barra inferior de navegación.
+
+3. **Pantalla Reseña**
+   - Permite al usuario escribir una reseña sobre un libro.
+   - Incluye un formulario con nombre del libro, categoría y campo de texto para la reseña.
+
+4. **Pantalla User**
+   - Muestra los datos personales del usuario registrado.
+   - Acceso a editar información o cerrar sesión.
+
+---
+
+### 📝 Notas importantes:
+
+- Los **datos de cada libro** incluyen:
+  - Nombre  
+  - Autor  
+  - Categoría  
+  - Idioma original  
+  - Año de publicación  
+  - Imagen de portada
+
+---
+
+### 🎨 Paleta de colores utilizada:
+
+Se usó la siguiente paleta de colores desde [ColorHunt](https://colorhunt.co/palette/2016581d24ca98abee9e8c9):
+
+- `#201658` (Azul profundo)  
+- `#1D24CA` (Azul vivo)  
+- `#98ABEE` (Azul pastel)  
+- `#F9E8C9` (Beige claro)  
+- `#DDA853` (Oro suave)
+
+---
+
+### 📷 Diagrama visual:
+
+<p align="center">
+  <img src="./assets/images/imgs_README/Wireframe_mi-biblioteca-virtual.png" alt="Flujo de navegación de Dumblee" width="100%"/>
+</p>
+
+
 ##  Características
 
 - Catálogo visual de libros categorizados.
@@ -24,7 +82,7 @@
   <img src="./assets/images/imgs_README/welcome-to-dumblee.png" alt="Pantalla de bienvenida" width="250" />
   <img src="./assets/images/imgs_README/home-dumblee.png" alt="Pantalla principal" width="250"/>
   <img src="./assets/images/imgs_README/reseña-dumblee.png" alt="Pantalla de reseña" width="250"/>
-  <img src="./assets/images/imgs_README/user-profile-dumblee.png" alt="Perfil de usuario" width="250" height="539"/>
+  <!-- <img src="./assets/images/imgs_README/user-profile-dumblee.png" alt="Perfil de usuario" width="250" height="539"/> -->
 </p>
 
 
