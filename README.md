@@ -29,7 +29,7 @@ El siguiente diagrama muestra el flujo principal de pantallas en la aplicación 
 
 ---
 
-### 📝 Notas importantes:
+### Notas importantes:
 
 - Los **datos de cada libro** incluyen:
   - Nombre  
@@ -41,7 +41,7 @@ El siguiente diagrama muestra el flujo principal de pantallas en la aplicación 
 
 ---
 
-### 🎨 Paleta de colores utilizada:
+### Paleta de colores utilizada:
 
 Se usó la siguiente paleta de colores desde [ColorHunt](https://colorhunt.co/palette/2016581d24ca98abee9e8c9):
 
