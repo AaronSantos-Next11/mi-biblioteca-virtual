@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# Bienvenido a la documentación oficial de Dumblee
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Dumblee** es una aplicación móvil desarrollada con **React Native**, **Expo** y **TypeScript**, que funciona como una biblioteca virtual centrada en libros de **programación**, **ciencia** e **historia**. Diseñada para entusiastas del conocimiento, ofrece una experiencia intuitiva y visualmente atractiva para explorar, consultar y descubrir libros de diversas categorías.
 
-## Get started
+##  Características
 
-1. Install dependencies
+- Catálogo visual de libros categorizados.
+- Imágenes de portadas integradas localmente.
+- Interfaz moderna y responsiva.
+- Componentes reutilizables en TypeScript.
+- Navegación fluida y amigable para el usuario.
 
-   ```bash
-   npm install
-   ```
+## Tecnologías utilizadas
 
-2. Start the app
+- **React Native** – UI móvil multiplataforma
+- **Expo** – Desarrollo rápido y sin complicaciones
+- **TypeScript** – Tipado estático para mayor robustez
+- **JSON** – Datos de libros estructurados localmente
+- **StyleSheet API** – Estilos nativos en línea
 
-   ```bash
-   npx expo start
-   ```
+## Capturas de pantalla
 
-In the output, you'll find options to open the app in a
+<p align="center">
+  <img src="./assets/images/imgs_README/welcome-to-dumblee.png" alt="Pantalla de bienvenida" width="250" />
+  <img src="./assets/images/imgs_README/home-dumblee.png" alt="Pantalla principal" width="250"/>
+  <img src="./assets/images/imgs_README/reseña-dumblee.png" alt="Pantalla de reseña" width="250"/>
+  <img src="./assets/images/imgs_README/user-profile-dumblee.png" alt="Perfil de usuario" width="250" height="539"/>
+</p>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Instalación y ejecución
 
-## Get a fresh project
-
-When you're ready, run:
+1. Clona el repositorio:
 
 ```bash
-npm run reset-project
+git clone https://github.com/AaronSantos-Next11/mi-biblioteca-virtual.git
+cd mi-biblioteca-virtual
+````
+
+2. Instala las dependencias:
+
+```bash
+npm install
+# o
+yarn install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Inicia el servidor de desarrollo:
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Escanea el código QR desde la app de **Expo Go** en tu dispositivo móvil.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Próximas mejoras
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Buscador por título o autor
+* Detalle individual del libro
+* Integración con APIs externas (Google Books, Open Library)
+* Sistema de favoritos
+* Modo oscuro
